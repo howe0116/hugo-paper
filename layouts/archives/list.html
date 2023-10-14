@@ -1,0 +1,35 @@
+{{- define "main" }}
+<article>
+<header class="mb-16">
+  <h1 class="!my-0 pb-2.5 ">{{ .Title }}</h1>
+</header>
+
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- if .Site.Params.ShowAllPagesInArchive }}
+{{- $pages = site.RegularPages }}
+{{- end }}
+
+{{- range $pages.GroupByPublishDate "2006" }}
+{{- if ne .Key "0001" }}
+<ul class=" max-w-3xl   px-1   leading-relaxed ">
+  <li class=" my-0   font-bold list-none mb-3 ">
+   <h2> {{- replace .Key "0001" "" }}<sup class="text-secondary ">&nbsp;&nbsp;{{ len .Pages }}</sup></h2>
+  </li>
+  
+    {{- range .Pages }}
+    {{- if eq .Kind "page" }}
+    <li class="relative  block my-2 first-of-type:mt-0 last-of-type:mb-0 ">
+      <time class="mr-4"
+        >{{ .Date | time.Format ("01-02") }}</time
+      ><a class="!my-0 pb-1 !leading-none text-lg break-all  hover:text-gray-500" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">{{- .Title | markdownify }}</a>{{- if .Draft }}<sup><span>&nbsp;&nbsp;[draft]</span></sup>{{- end }}</section>
+      
+    {{- end }}
+    {{- end }}
+  </li>
+</ul>
+{{- end }}
+{{- end }}
+</article>
+{{- end }}{{/* end main */}}

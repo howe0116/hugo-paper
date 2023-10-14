@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.10
@@ -19,7 +15,7 @@ dependencies:
     version: 15.10.3
   stylelint-config-one:
     specifier: ^2.4.0
-    version: 2.4.0(postcss@8.4.31)(stylelint@15.10.3)
+    version: 2.4.0(stylelint@15.10.3)
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
@@ -294,7 +290,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.3
+      fsevents: registry.npmmirror.com/fsevents@2.3.3
     dev: false
 
   /color-convert@1.9.3:
@@ -489,14 +485,6 @@ packages:
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: false
-
-  /fsevents@2.3.3:
-    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
 
   /glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -1029,13 +1017,11 @@ packages:
       postcss: 8.4.31
     dev: false
 
-  /postcss-scss@4.0.9(postcss@8.4.31):
+  /postcss-scss@4.0.9:
     resolution: {integrity: sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.4.29
-    dependencies:
-      postcss: 8.4.31
     dev: false
 
   /postcss-selector-parser@6.0.10:
@@ -1320,10 +1306,10 @@ packages:
     dependencies:
       stylelint: 15.10.3
     optionalDependencies:
-      stylelint-scss: 5.2.1(stylelint@15.10.3)
+      stylelint-scss: registry.npmmirror.com/stylelint-scss@5.2.1(stylelint@15.10.3)
     dev: false
 
-  /stylelint-config-one@2.4.0(postcss@8.4.31)(stylelint@15.10.3):
+  /stylelint-config-one@2.4.0(stylelint@15.10.3):
     resolution: {integrity: sha512-xyBdwIWmYNUmmfzvDwoCzAv8DnqJ4vGMd9t5AoTwNktBZIKz14IqJG4tPMRvZDbTKeEq6scBsB4zkx6+BPSORQ==}
     peerDependencies:
       stylelint: '>=14.0.0'
@@ -1333,7 +1319,7 @@ packages:
       stylelint-config-prettier: 9.0.5(stylelint@15.10.3)
       stylelint-config-recess-order: 4.3.0(stylelint@15.10.3)
       stylelint-config-standard: 30.0.1(stylelint@15.10.3)
-      stylelint-config-standard-scss: 7.0.1(postcss@8.4.31)(stylelint@15.10.3)
+      stylelint-config-standard-scss: 7.0.1(stylelint@15.10.3)
     transitivePeerDependencies:
       - postcss
     dev: false
@@ -1357,7 +1343,7 @@ packages:
       stylelint-order: 6.0.3(stylelint@15.10.3)
     dev: false
 
-  /stylelint-config-recommended-scss@9.0.1(postcss@8.4.31)(stylelint@15.10.3):
+  /stylelint-config-recommended-scss@9.0.1(stylelint@15.10.3):
     resolution: {integrity: sha512-qAmz/TdrqslwiMTuLM3QXeISUkfEDUXGMfRBCHm/xrkCJNnQefv+mzG2mWTsWkqcVk8HAyUkug10dwAcYp2fCQ==}
     peerDependencies:
       postcss: ^8.3.3
@@ -1366,8 +1352,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      postcss: 8.4.31
-      postcss-scss: 4.0.9(postcss@8.4.31)
+      postcss-scss: 4.0.9
       stylelint: 15.10.3
       stylelint-config-recommended: 10.0.1(stylelint@15.10.3)
       stylelint-scss: 4.7.0(stylelint@15.10.3)
@@ -1381,7 +1366,7 @@ packages:
       stylelint: 15.10.3
     dev: false
 
-  /stylelint-config-standard-scss@7.0.1(postcss@8.4.31)(stylelint@15.10.3):
+  /stylelint-config-standard-scss@7.0.1(stylelint@15.10.3):
     resolution: {integrity: sha512-m5sRdtsB1F5fnC1Ozla7ryftU47wVpO+HWd+JQTqeoG0g/oPh5EfbWfcVHbNCEtuoHfALIySiUWS20pz2hX6jA==}
     peerDependencies:
       postcss: ^8.3.3
@@ -1390,9 +1375,8 @@ packages:
       postcss:
         optional: true
     dependencies:
-      postcss: 8.4.31
       stylelint: 15.10.3
-      stylelint-config-recommended-scss: 9.0.1(postcss@8.4.31)(stylelint@15.10.3)
+      stylelint-config-recommended-scss: 9.0.1(stylelint@15.10.3)
       stylelint-config-standard: 30.0.1(stylelint@15.10.3)
     dev: false
 
@@ -1426,21 +1410,6 @@ packages:
       postcss-value-parser: 4.2.0
       stylelint: 15.10.3
     dev: false
-
-  /stylelint-scss@5.2.1(stylelint@15.10.3):
-    resolution: {integrity: sha512-ZoTJUM85/qqpQHfEppjW/St//8s6p9Qsg8deWlYlr56F9iUgC9vXeIDQvH4odkRRJLTLFQzYMALSOFCQ3MDkgw==}
-    requiresBuild: true
-    peerDependencies:
-      stylelint: ^14.5.1 || ^15.0.0
-    dependencies:
-      known-css-properties: 0.28.0
-      postcss-media-query-parser: 0.2.3
-      postcss-resolve-nested-selector: 0.1.1
-      postcss-selector-parser: 6.0.13
-      postcss-value-parser: 4.2.0
-      stylelint: 15.10.3
-    dev: false
-    optional: true
 
   /stylelint@15.10.3:
     resolution: {integrity: sha512-aBQMMxYvFzJJwkmg+BUUg3YfPyeuCuKo2f+LOw7yYbU8AZMblibwzp9OV4srHVeQldxvSFdz0/Xu8blq2AesiA==}
@@ -1667,3 +1636,35 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: false
+
+  registry.npmmirror.com/fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.3.tgz}
+    name: fsevents
+    version: 2.3.3
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  registry.npmmirror.com/stylelint-scss@5.2.1(stylelint@15.10.3):
+    resolution: {integrity: sha512-ZoTJUM85/qqpQHfEppjW/St//8s6p9Qsg8deWlYlr56F9iUgC9vXeIDQvH4odkRRJLTLFQzYMALSOFCQ3MDkgw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/stylelint-scss/-/stylelint-scss-5.2.1.tgz}
+    id: registry.npmmirror.com/stylelint-scss/5.2.1
+    name: stylelint-scss
+    version: 5.2.1
+    requiresBuild: true
+    peerDependencies:
+      stylelint: ^14.5.1 || ^15.0.0
+    dependencies:
+      known-css-properties: 0.28.0
+      postcss-media-query-parser: 0.2.3
+      postcss-resolve-nested-selector: 0.1.1
+      postcss-selector-parser: 6.0.13
+      postcss-value-parser: 4.2.0
+      stylelint: 15.10.3
+    dev: false
+    optional: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
