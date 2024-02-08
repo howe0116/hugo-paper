@@ -6,7 +6,7 @@
  */
 
 /*
- ! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
+ ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
  */
 
 /*
@@ -39,11 +39,9 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
 */
 
-html,
-:host {
+html {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -53,14 +51,12 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
-  -webkit-tap-highlight-color: transparent;
-  /* 7 */
 }
 
 /*
@@ -132,10 +128,8 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -144,12 +138,8 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-feature-settings: normal;
-  /* 2 */
-  font-variation-settings: normal;
-  /* 3 */
   font-size: 1em;
-  /* 4 */
+  /* 2 */
 }
 
 /*
@@ -465,7 +455,7 @@ body {
   background: var(--bg);
 }
 
-:is(:where(.dark) body) {
+:is(.dark body) {
   background-color: rgb(0 0 0 / 0.9);
 }
 
@@ -1135,7 +1125,7 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-:is(:where(.dark) .btn) {
+:is(.dark .btn) {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -1151,7 +1141,7 @@ body {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-:is(:where(.dark) .link:hover) {
+:is(.dark .link:hover) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1353,14 +1343,6 @@ body {
   height: 100%;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
-.h-12 {
-  height: 3rem;
-}
-
 .min-h-\[calc\(100\%-9rem\)\] {
   min-height: calc(100% - 9rem);
 }
@@ -1385,14 +1367,6 @@ body {
   width: 5rem;
 }
 
-.w-24 {
-  width: 6rem;
-}
-
-.w-12 {
-  width: 3rem;
-}
-
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1408,10 +1382,6 @@ body {
 
 .-translate-y-\[1px\] {
   --tw-translate-y: -1px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1507,11 +1477,6 @@ body {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .p-3 {
@@ -1657,11 +1622,6 @@ body {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .no-underline {
   text-decoration-line: none;
 }
@@ -1679,14 +1639,6 @@ body {
   opacity: 0.7;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-40 {
-  opacity: 0.4;
-}
-
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1695,10 +1647,6 @@ body {
 
 .duration-200 {
   transition-duration: 200ms;
-}
-
-.duration-1000 {
-  transition-duration: 1000ms;
 }
 
 .ease-out {
@@ -1725,7 +1673,7 @@ body {
   content: var(--tw-content);
 }
 
-:is(:where(.dark) .btn-menu)::before,:is(:where(.dark) 
+:is(.dark .btn-menu)::before,:is(.dark 
   .btn-menu)::after {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1765,7 +1713,7 @@ article {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-:is(:where(.dark) article) {
+:is(.dark article) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1776,7 +1724,7 @@ article blockquote {
   border-color: rgb(0 0 0 / var(--tw-border-opacity)) !important;
 }
 
-:is(:where(.dark) article blockquote) {
+:is(.dark article blockquote) {
   --tw-border-opacity: 1 !important;
   border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
 }
@@ -1853,7 +1801,7 @@ article .highlight > div table tr td:last-of-type {
   transition: background-position 0.4s steps(5);
 }
 
-:is(:where(.dark) .dark\:prose-invert) {
+:is(.dark .dark\:prose-invert) {
   --tw-prose-body: var(--tw-prose-invert-body);
   --tw-prose-headings: var(--tw-prose-invert-headings);
   --tw-prose-lead: var(--tw-prose-invert-lead);
@@ -1896,18 +1844,9 @@ article .highlight > div table tr td:last-of-type {
   background-color: rgb(0 0 0 / 2%);
 }
 
-<<<<<<< HEAD
-.hover\:fill-stone-900:hover {
-  fill: #1c1917;
-}
-
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.hover\:opacity-100:hover {
-  opacity: 1;
 }
 
 :is(.dark .dark\:\!bg-black\/80) {
@@ -1937,11 +1876,6 @@ article .highlight > div table tr td:last-of-type {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-:is(.dark .dark\:invert-0) {
-  --tw-invert: invert(0);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 :is(.dark .dark\:\[background-position\:right\]) {
   background-position: right;
 }
@@ -1950,12 +1884,6 @@ article .highlight > div table tr td:last-of-type {
   background-color: rgb(255 255 255 / 3%);
 }
 
-:is(.dark .dark\:hover\:fill-stone-100:hover) {
-  fill: #f5f5f4;
-}
-
-=======
->>>>>>> 9782859a4acf10f8608a7095bd32f4385bf80b87
 @media (min-width: 1024px) {
   .lg\:static {
     position: static;
@@ -2027,39 +1955,4 @@ article .highlight > div table tr td:last-of-type {
   .lg\:transition-none {
     transition-property: none;
   }
-}
-
-:is(:where(.dark) .dark\:\!bg-black\/80) {
-  background-color: rgb(0 0 0 / 0.8) !important;
-}
-
-:is(:where(.dark) .dark\:bg-black) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-:is(:where(.dark) .dark\:bg-white\/\[15\%\]) {
-  background-color: rgb(255 255 255 / 15%);
-}
-
-:is(:where(.dark) .dark\:bg-white\/\[8\%\]) {
-  background-color: rgb(255 255 255 / 8%);
-}
-
-:is(:where(.dark) .dark\:text-white) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-:is(:where(.dark) .dark\:invert) {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-:is(:where(.dark) .dark\:\[background-position\:right\]) {
-  background-position: right;
-}
-
-:is(:where(.dark) .dark\:hover\:bg-white\/\[3\%\]:hover) {
-  background-color: rgb(255 255 255 / 3%);
 }
