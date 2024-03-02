@@ -2068,6 +2068,11 @@ article .highlight > div table tr td:last-of-type {
     line-height: 1.5rem;
   }
 
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .lg\:font-bold {
     font-weight: 700;
   }

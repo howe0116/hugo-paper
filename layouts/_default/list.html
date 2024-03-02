@@ -55,7 +55,7 @@
     >Featured</span
   >
   {{ end }}
-  <h2 class="!my-0 pb-1 font-bold !leading-none">{{ .Title }}</h2>   
+  <h2 class="!my-0 pb-1 font-bold lg:text-xl text-lg !leading-none">{{ .Title }}</h2>   
   <div>
   <time class="text-sm antialiased opacity-60 inline-block"
     >{{ .Date | time.Format ":date_short" }}</time>{{ if .Params.tags }}
