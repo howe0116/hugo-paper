@@ -37,10 +37,14 @@
 
   <!-- Dark Icon -->
   {{ $dark_icon := "theme.png" }}
+  {{ $light_icon := "theme.png" }}
   <!---->
-  {{ if site.Params.monoDarkIcon }}{{ $dark_icon = "theme.svg" }}{{ end }}
+  {{ if site.Params.monoDarkIcon }}
+  {{ $dark_icon = "dark.svg" }}
+  {{ $light_icon = "light.svg" }}{{ end }}
   <!---->
   <link rel="preload" as="image" href="{{ $dark_icon | absURL }}" />
+  <link rel="preload" as="image" href="{{ $light_icon | absURL }}" />
 
   <!-- Avatar -->
   {{ $avatar_url := $.Scratch.Get "avatar_url" }}
