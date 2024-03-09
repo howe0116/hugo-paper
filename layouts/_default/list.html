@@ -22,14 +22,9 @@
 {{ if or $avatar_url site.Params.name }}
 <div class="-mt-2 mb-16 flex items-center">
   {{ if $avatar_url }}
-  <div
-    class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow dark:bg-white/[15%]"
-  >
-    <img
-      class="my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
-      src="{{ $avatar_url }}"
-      alt="{{ site.Params.name | default site.Title }}"
-    />
+  <div class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow dark:bg-white/[15%]">
+    <img class="my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="{{ $avatar_url }}" alt="{{ site.Params.name | default site.Title }}" />
   </div>
   {{ end }}<!---->
   {{ if site.Params.name }}
@@ -49,33 +44,42 @@
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0 ">
   <div class="flex flex-row content-start justify-between gap-6 mb-1">
     <div class="flex flex-col gap-2 justify-center">
-  {{ if gt .Weight 0 }}
-  <span
-    class="mb-2 ml-px inline-block text-[0.8rem] font-medium uppercase tracking-wider text-[#ff3b2d] opacity-70"
-    >Featured</span
-  >
-  {{ end }}
-  <h2 class="!my-0 pb-1 font-bold lg:text-xl text-lg !leading-none">{{ .Title }}</h2>   
-  <div>
-  <time class="text-sm antialiased opacity-60 inline-block"
-    >{{ .Date | time.Format ":date_short" }}</time>{{ if .Params.tags }}
-  
-    {{/*  {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} ·
-    <span
-      class="text-sm antialiased opacity-60 inline-block">{{ . }}</span>
-    {{ end }}  */}}
-    <span
-    class="text-sm antialiased opacity-60 inline-block">· {{ .Section | title  }}</span>
-    
-  {{ end }}</div> </div>
-  {{ with .Params.cover }}
-  <img loading="lazy" decoding="async"  class="m-0  flex w-[90px] h-[90px] object-cover shadow-xl rounded-lg " src="{{ . }}" >
-{{ else }}
-  <div class="w-[90px] h-[90px]"></div>
-  {{/*  <img class="m-0  flex w-1/3 md:w-1/4 h-28 object-cover rounded-xl " src="{{ site.Params.default_cover }}" alt="默认封面图">  */}}
-{{ end }}
-  
-</div>
+      {{ if gt .Weight 0 }}
+      <span
+        class="mb-2 ml-px inline-block text-[0.8rem] font-medium uppercase tracking-wider text-[#ff3b2d] opacity-70">Featured</span>
+      {{ end }}
+      <h2 class="!my-0 pb-1 font-bold lg:text-xl text-lg !leading-none">{{ .Title }}</h2>
+      <div>
+        <time class="text-sm antialiased opacity-60 inline-block">{{ .Date | time.Format ":date_short" }} · </time>
+        {{/* {{ if .Params.tags }}
+
+        {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} ·
+        <span class="text-sm antialiased opacity-60 inline-block">{{ . }}</span>
+        {{ end }}
+
+        {{ end }} */}}
+        <svg t="1709958677055"
+          class="icon h-4 w-4 inline-block -translate-y-[2px] translate-x-[3px] dark:invert opacity-50 "
+          viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3921" width="200" height="200">
+          <path
+            d="M170.666667 85.333333l213.333333 0 85.333333 128 384 0q52.992 0 90.496 37.504t37.504 90.496l0 469.333333q0 52.992-37.504 90.496t-90.496 37.504l-682.666667 0q-52.992 0-90.496-37.504t-37.504-90.496l0-597.333333q0-52.992 37.504-90.496t90.496-37.504zM423.68 298.666667l-82.346667-128-170.666667 0q-17.664 0-30.165333 12.501333t-12.501333 30.165333l0 597.333333q0 17.664 12.501333 30.165333t30.165333 12.501333l682.666667 0q17.664 0 30.165333-12.501333t12.501333-30.165333l0-469.333333q0-17.664-12.501333-30.165333t-30.165333-12.501333l-429.653333 0z"
+            p-id="3922"></path>
+        </svg>
+
+        <span class="text-sm antialiased opacity-60 inline-block">{{ .Section | title }}</span>
+
+      </div>
+    </div>
+    {{ with .Params.cover }}
+    <img loading="lazy" decoding="async" class="m-0  flex w-[90px] h-[90px] object-cover shadow-xl rounded-lg "
+      src="{{ . }}">
+    {{ else }}
+    <div class="w-[90px] h-[90px]"></div>
+    {{/* <img class="m-0  flex w-1/3 md:w-1/4 h-28 object-cover rounded-xl " src="{{ site.Params.default_cover }}"
+      alt="默认封面图"> */}}
+    {{ end }}
+
+  </div>
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
 </section>
 {{ end }}
@@ -87,9 +91,7 @@
   <a class="btn" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
   {{ end }}<!---->
   {{ if $paginator.HasNext }}
-  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}"
-    >{{ i18n "next_page" }} →</a
-  >
+  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} →</a>
   {{ end }}
 </nav>
 {{ end }}<!---->
