@@ -60,11 +60,13 @@
   <time class="text-sm antialiased opacity-60 inline-block"
     >{{ .Date | time.Format ":date_short" }}</time>{{ if .Params.tags }}
   
-    {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} ·
+    {{/*  {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} ·
     <span
       class="text-sm antialiased opacity-60 inline-block">{{ . }}</span>
-    {{ end }}
- 
+    {{ end }}  */}}
+    <span
+    class="text-sm antialiased opacity-60 inline-block">· {{ .Section | title  }}</span>
+    
   {{ end }}</div> </div>
   {{ with .Params.cover }}
   <img loading="lazy" decoding="async"  class="m-0  flex w-[90px] h-[90px] object-cover shadow-xl rounded-lg " src="{{ . }}" >
