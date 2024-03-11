@@ -87,7 +87,7 @@
   }
 
   article .highlight {
-    @apply my-8;
+    @apply my-8 -mx-8 ;
   }
 
   article .highlight pre {

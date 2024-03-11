@@ -6,7 +6,7 @@
       >{{ site.Title }}</a
     >
     <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer {{ if site.Params.monoDarkIcon }}dark:invert active:rotate-90  transition-all transform duration-400
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer {{ if site.Params.monoDarkIcon }}dark:invert active:rotate-90  transition-all transform duration-300
       bg-[url(./dark.svg)] bg-cover bg-no-repeat dark:bg-[url(./light.svg)] dark:bg-cover dark:bg-no-repeat {{ else }}[background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)]{{ end }} dark:[background-position:right]"
       role="button"
       aria-label="Dark"
@@ -58,10 +58,33 @@
     });
 
     // manual switch
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
+   /* JavaScript code to handle button click and theme change */
+const btnDark = document.querySelector('.btn-dark');
+
+btnDark.addEventListener('click', ($eve) => {
+  changeBtn(() => {
+    setDark(localStorage.getItem('dark') !== 'true');
+  }, $eve);
+});
+
+
+function changeBtn(event, $eve) {
+  // Modify CSS variables based on mouse click position
+  document.documentElement.style.setProperty('--x', $eve.clientX + 'px');
+  document.documentElement.style.setProperty('--y', $eve.clientY + 'px');
+    
+  // Check if browser supports startViewTransition method
+  if (document.startViewTransition) {
+    // Use startViewTransition to change themes if supported
+    document.startViewTransition(() => {
+      event();
     });
+  } else {
+    // Directly switch theme if startViewTransition is not supported
+    event();
+  }
+}
+    
   </script>
 
   <div
