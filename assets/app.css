@@ -32,7 +32,7 @@
     @apply rounded-xl bg-black px-6 py-3 text-sm text-white no-underline shadow duration-100 active:scale-95 dark:bg-white/[8%] dark:text-zinc-300;
   }
   .btn-outline {
-    @apply rounded-lg px-7 py-4 text-sm no-underline shadow duration-100 active:scale-95 border-[1px] border-black dark:border-zinc-50 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-zinc-700;
+    @apply  rounded-lg lg:p-4 py-2 px-4 leading-4 text-sm no-underline  duration-100 active:scale-95 bg-black/[3%] dark:bg-white/[8%] hover:bg-black hover:text-zinc-300 dark:hover:bg-zinc-300 dark:hover:text-zinc-700;
   }
 
   .link {
@@ -91,7 +91,7 @@
   }
 
   article .highlight pre {
-    @apply my-0;
+    @apply my-0 md:rounded-md rounded-none;
   }
 
   article .highlight > div {
