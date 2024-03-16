@@ -33,17 +33,45 @@
     {{ end }}
   </footer>
   {{ end }}
-  <div class="bg-black/[8%] dark:bg-white/[8%] mx-1 my-10 h-px"></div>
+  
   <!-- Post Nav -->
   {{ if not site.Params.disablePostNavigation }}<!---->
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
   {{ if and (gt (len $pages) 1) (in $pages . ) }}
+  <div class="flex justify-between items-center mt-8 w-full">
+    {{/*  <button
+      class="no-underline hover:-translate-x-2 text-gray-700 transition duration-500  dark:text-gray-300 hover:transition-transform rounded-lg px-2 py-1 cursor-pointer flex items-center"><svg
+        class="icon back w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor"
+        style="cursor: pointer;">
+        <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"></path>
+      </svg>Back</button>  */}}
+      <button></button>
+      <button
+      id="pageTop"
+      class="no-underline hover:-translate-y-1 text-zinc-700 transition duration-500 text-sm mr-1 dark:text-zinc-300 hover:transition-transform rounded-lg px-2 py-1 cursor-pointer flex items-center  justify-end">
+      <svg
+        class="icon back w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor"
+        style="cursor: pointer;">
+        <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"></path>
+      </svg>返回顶部</button>
+  <script>
+    const pageTop = document.getElementById("pageTop");
+    pageTop.addEventListener("click", scrollToTop);
+    
+    function scrollToTop() {
+        window.scroll({top: 0, behavior: "smooth"})
+    }</script>
+  </div>
+  <div class="bg-black/[8%] dark:bg-white/[8%] mx-1 mb-10 h-px"></div>
   <nav class="flex gap-x-2 justify-between">
     {{ with $pages.Next . }}
     <a
-      class="flex items-center font-semibold  btn-outline"
+      class="flex items-center font-semibold  btn-prev"
       href="{{ .Permalink }}"
-      ><svg class="!leading-4 fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg>
+      >
+      <div>
+      <svg class="flex !leading-4 fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg>
+    </div>
       <div class="flex flex-col items-start"><span class="opacity-70 hidden text-xs font-normal lg:block">PREV</span> 
         <span>{{ .Name }}</span>
       </div></a
@@ -52,18 +80,21 @@
     {{ with $pages.Prev . }}
 
     <a
-      class="ml-auto flex  items-center font-semibold justify-end btn-outline "
+      class="ml-auto flex  items-center font-semibold justify-end btn-next "
       href="{{ .Permalink }}"
       ><div class="flex flex-col items-end"><span class="opacity-70 hidden text-xs font-normal lg:block">NEXT</span> 
         <span>{{ .Name }}</span>
       </div>
-      <svg class="!leading-4 fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg></a
-    >
-  
+      <div>
+      <svg  class="flex !leading-4 fill-current h-8 w-8"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+    </div>
+ 
+    </a>  
     {{ end }}
   </nav>
-  {{ end }}<!---->
   <div class="bg-black/[8%] dark:bg-white/[8%] mx-1 my-10 h-px"></div>
+  {{ end }}<!---->
+  
   {{ end }}
 
   <!-- Disqus -->
