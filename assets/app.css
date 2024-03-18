@@ -23,7 +23,7 @@
     -webkit-tap-highlight-color: transparent;
     background: var(--bg);
 
-    @apply dark:bg-black/90;
+    @apply dark:bg-black/90 ;
   }
 }
 
