@@ -56,10 +56,7 @@
     @apply break-words;
   }
 
-  .btn-menu::before,
-  .btn-menu::after {
-    @apply block h-[2px] w-5 bg-black duration-200 content-[''] dark:invert;
-  }
+ 
 
   .nav-wrapper {
     background: var(--bg);
@@ -68,15 +65,14 @@
   .open {
     @apply overflow-hidden;
   }
-
-  .open .btn-menu::before {
-    @apply w-6 translate-y-[5.5px] rotate-45;
+  .open .btn-menu .hidden-icon{
+    @apply hidden;
+  }
+  .open .btn-menu .show-icon{
+    @apply block;
   }
 
-  .open .btn-menu::after {
-    @apply w-6 -translate-y-[5.5px] -rotate-45;
-  }
-
+ 
   .open .nav-wrapper {
     @apply top-0;
   }
