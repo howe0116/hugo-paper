@@ -1,12 +1,12 @@
 <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8  lg:justify-center ">
   <div class="relative z-50 mr-auto flex items-center">
     <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      class="-translate-x-[1px] -translate-y-[1px] text-xl font-semibold"
       href="{{ `` | absURL }}"
       >{{ site.Title }}</a
     >
     <div
-      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer {{ if site.Params.monoDarkIcon }}dark:invert active:rotate-90  transition-all transform duration-300
+      class="btn-dark text-[0] ml-4 h-5 w-5 shrink-0 cursor-pointer {{ if site.Params.monoDarkIcon }}dark:invert active:rotate-90  transition-all transform duration-300
       bg-[url(./dark.svg)] bg-cover bg-no-repeat dark:bg-[url(./light.svg)] dark:bg-cover dark:bg-no-repeat {{ else }}[background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)]{{ end }} dark:[background-position:right]"
       role="button"
       aria-label="Dark"
@@ -89,7 +89,7 @@ function changeBtn(event, $eve) {
   </script>
 
   <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-neutral-900 lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-neutral-900 lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none lg:font-semibold"
   >
     {{ $url := .RelPermalink }}<!---->
     {{ with site.Menus.main }}

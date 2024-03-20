@@ -23,7 +23,7 @@
     -webkit-tap-highlight-color: transparent;
     background: var(--bg);
 
-    @apply dark:bg-black/90 ;
+    @apply dark:bg-black/90 text-zinc-700 dark:text-zinc-300;
   }
 }
 
@@ -80,7 +80,9 @@
   article {
     @apply text-base leading-[1.8] text-neutral-900 dark:text-neutral-300;
   }
-
+  article h1,h2,h3,h4,h5 {
+    @apply text-zinc-700 dark:text-zinc-300 ;
+  }
   article blockquote {
     @apply !border-l-[3px] !border-black dark:!border-white;
   }

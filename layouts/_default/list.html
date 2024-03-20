@@ -42,15 +42,31 @@
 {{ end }}
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0 transition duration-500">
-  <div class="flex flex-row content-start justify-between gap-6 mb-1">
-    <div class="flex flex-col gap-2 justify-center">
+  <div class="flex flex-row content-start gap-5 mb-1">
+    {{ with .Params.cover }}
+    <div class="flex flex-none items-center">
+      
+      <img loading="lazy" decoding="async"
+        class="m-0  flex  w-[105px] h-[105px] object-cover rounded dark:brightness-75 " src="{{ . }}">
+      </div>
+      {{ else }}
+      {{/*  <div class="w-[105px] h-[105px]"></div>  */}}
+      {{/* <img class="m-0  flex w-1/3 md:w-1/4 h-28 object-cover rounded-xl " src="{{ site.Params.default_cover }}"
+        alt="默认封面图"> */}}
+      {{ end }}
+   
+    <div class="flex flex-col justify-center">
       {{ if gt .Weight 0 }}
       <span
         class="mb-2 ml-px inline-block text-[0.8rem] font-medium uppercase tracking-wider text-[#ff3b2d] opacity-70">Featured</span>
       {{ end }}
-      <h2 class="!my-0 pb-1 font-bold lg:text-xl text-lg !leading-none">{{ .Title }}</h2>
+      <h2 class="!my-0  font-bold  text-xl !leading-[1.2]">{{ .Title }}</h2>
       <div>
-        <time class="text-sm antialiased opacity-60 inline-block">{{ .Date | time.Format ":date_short" }} · </time>
+      <p
+        class="break-all mt-2 text-sm mb-1 overflow-hidden text-ellipsis line-clamp-2 dark:text-zinc-500  max-h-[40px] ">
+        {{ .Description | default .Summary }}</p>
+      
+        <time class="text-sm antialiased dark:text-zinc-500  inline-block">{{ .Date | time.Format ":date_short" }} · </time>
         {{/* {{ if .Params.tags }}
 
         {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} ·
@@ -59,25 +75,18 @@
 
         {{ end }} */}}
         <svg t="1709958677055"
-          class="icon h-4 w-4 inline-block -translate-y-[2px] translate-x-[3px] dark:invert opacity-50 "
+          class="icon h-4 w-4 inline-block -translate-y-[2px] translate-x-[3px] dark:invert dark:text-zinc-500  "
           viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3921" width="200" height="200">
           <path
+            fill="currentColor"
             d="M170.666667 85.333333l213.333333 0 85.333333 128 384 0q52.992 0 90.496 37.504t37.504 90.496l0 469.333333q0 52.992-37.504 90.496t-90.496 37.504l-682.666667 0q-52.992 0-90.496-37.504t-37.504-90.496l0-597.333333q0-52.992 37.504-90.496t90.496-37.504zM423.68 298.666667l-82.346667-128-170.666667 0q-17.664 0-30.165333 12.501333t-12.501333 30.165333l0 597.333333q0 17.664 12.501333 30.165333t30.165333 12.501333l682.666667 0q17.664 0 30.165333-12.501333t12.501333-30.165333l0-469.333333q0-17.664-12.501333-30.165333t-30.165333-12.501333l-429.653333 0z"
             p-id="3922"></path>
         </svg>
 
-        <span class="text-sm antialiased opacity-60 inline-block">{{ .Section | title }}</span>
+        <span class="text-sm antialiased dark:text-zinc-500  inline-block">{{ .Section | title }}</span>
 
       </div>
     </div>
-    {{ with .Params.cover }}
-    <img loading="lazy" decoding="async" class="m-0  flex lg:w-[150px] w-[90px] h-[90px] object-cover shadow-xl rounded-lg dark:brightness-75 "
-      src="{{ . }}">
-    {{ else }}
-    <div class="w-[90px] h-[90px]"></div>
-    {{/* <img class="m-0  flex w-1/3 md:w-1/4 h-28 object-cover rounded-xl " src="{{ site.Params.default_cover }}"
-      alt="默认封面图"> */}}
-    {{ end }}
 
   </div>
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
@@ -88,11 +97,19 @@
 {{ if gt $paginator.TotalPages 1 }}
 <nav class="mt-16 flex">
   {{ if $paginator.HasPrev }}
-  <a class="flex items-center btn font-semibold" href="{{ $paginator.Prev.URL }}"><svg class="!leading-4 fill-current h-6 w-6 inline-flex" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg>
-     {{ i18n "prev_page" }}</a>
+  <a class="flex items-center btn font-semibold" href="{{ $paginator.Prev.URL }}"><svg
+      class="!leading-4 fill-current h-6 w-6 inline-flex" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+      viewBox="0 0 24 24">
+      <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+    </svg>
+    {{ i18n "prev_page" }}</a>
   {{ end }}<!---->
   {{ if $paginator.HasNext }}
-  <a class="flex items-center btn ml-auto font-semibold" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} <svg class="!leading-4 fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg></a>
+  <a class="flex items-center btn ml-auto font-semibold" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} <svg
+      class="!leading-4 fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+      viewBox="0 0 24 24">
+      <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+    </svg></a>
   {{ end }}
 </nav>
 {{ end }}<!---->
