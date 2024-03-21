@@ -1180,7 +1180,7 @@ body {
   background-color: rgb(255 255 255 / 15%);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .btn-prev {
     width: auto;
     padding-top: 1rem;
@@ -1226,7 +1226,7 @@ body {
   background-color: rgb(255 255 255 / 15%);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .btn-next {
     width: auto;
     padding-top: 1rem;
@@ -1426,13 +1426,6 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-
-.line-clamp-1 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
 }
 
 .block {
@@ -1652,12 +1645,6 @@ body {
   overflow: hidden;
 }
 
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .text-ellipsis {
   text-overflow: ellipsis;
 }
@@ -1668,10 +1655,6 @@ body {
 
 .break-all {
   word-break: break-all;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-full {
@@ -1775,10 +1758,6 @@ body {
 
 .pb-2\.5 {
   padding-bottom: 0.625rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }
 
 .pt-8 {
@@ -1912,14 +1891,6 @@ body {
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.opacity-30 {
-  opacity: 0.3;
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .opacity-60 {
@@ -2253,6 +2224,10 @@ article .highlight > div table tr td:last-of-type {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:w-1\/4 {
     width: 25%;
   }
@@ -2269,10 +2244,6 @@ article .highlight > div table tr td:last-of-type {
 
   .lg\:mt-0 {
     margin-top: 0px;
-  }
-
-  .lg\:block {
-    display: block;
   }
 
   .lg\:flex {
