@@ -26,7 +26,7 @@
   <footer class="mt-12 flex flex-wrap">
     {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
     <a
-      class="mb-1.5 mr-1.5 rounded-lg before:content-['#']  text-zinc-50  bg-black px-5 py-1.5 no-underline dark:text-zinc-300 dark:bg-white/[8%]"
+      class="mb-1.5 mr-1.5 rounded-lg before:content-['#']  text-neutral-50  bg-black px-5 py-1.5 no-underline dark:text-neutral-300 dark:bg-white/[8%]"
       href="{{ $href }}"
       > {{ . }}</a
     >
@@ -48,7 +48,7 @@
       <button></button>
       <button
       id="pageTop"
-      class="no-underline hover:-translate-y-1 text-zinc-700 transition duration-500 text-sm mr-1 dark:text-zinc-300 hover:transition-transform rounded-lg px-2 py-1 cursor-pointer flex items-center  justify-end">
+      class="no-underline hover:-translate-y-1 text-neutral-700 transition duration-500 text-sm mr-1 dark:text-neutral-300 hover:transition-transform rounded-lg px-2 py-1 cursor-pointer flex items-center  justify-end">
       <svg
         class="icon back w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor"
         style="cursor: pointer;">

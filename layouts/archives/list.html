@@ -1,7 +1,7 @@
 {{- define "main" }}
 
 <header class="mb-16">
-    <h1 class="!my-0 pb-2.5 text-zinc-700 dark:text-zinc-300 ">{{ .Title }}</h1>
+    <h1 class="!my-0 pb-2.5 text-neutral-700 dark:text-neutral-300 ">{{ .Title }}</h1>
 </header>
 
 
@@ -15,7 +15,7 @@
 {{- if ne .Key "0001" }}
 
 
-   <p class="text-zinc-400 dark:prose-invert text-2xl first-of-type:mt-6 mt-12 mb-6 ml-1" >{{- replace .Key "0001" "" }}</p>
+   <p class="text-neutral-400 dark:prose-invert text-2xl first-of-type:mt-6 mt-12 mb-6 ml-1" >{{- replace .Key "0001" "" }}</p>
 
 
     {{- range .Pages }}
