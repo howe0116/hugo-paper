@@ -56,7 +56,11 @@
     @apply break-words;
   }
 
- 
+  .prose p a {
+    @apply underline underline-offset-4  text-neutral-900 dark:text-neutral-300;
+    
+   
+  }
 
   .nav-wrapper {
     background: var(--bg);
