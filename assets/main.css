@@ -1421,6 +1421,10 @@ body {
   margin-top: 2rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1488,6 +1492,10 @@ body {
   height: 1px;
 }
 
+.h-3 {
+  height: 0.75rem;
+}
+
 .max-h-\[40px\] {
   max-height: 40px;
 }
@@ -1530,6 +1538,10 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.w-3 {
+  width: 0.75rem;
 }
 
 .max-w-3xl {
@@ -1768,6 +1780,10 @@ body {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1884,8 +1900,16 @@ body {
   color: rgb(64 64 64 / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .no-underline {
   text-decoration-line: none;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 
 .antialiased {
@@ -1951,18 +1975,6 @@ body {
   overflow-wrap: break-word;
 }
 
-.prose p a {
-  --tw-text-opacity: 1;
-  color: rgb(23 23 23 / var(--tw-text-opacity));
-  text-decoration-line: underline;
-  text-underline-offset: 4px;
-}
-
-:is(.dark .prose p a) {
-  --tw-text-opacity: 1;
-  color: rgb(212 212 212 / var(--tw-text-opacity));
-}
-
 .nav-wrapper {
   background: var(--bg);
 }
@@ -2022,6 +2034,20 @@ article blockquote {
 :is(.dark article blockquote) {
   --tw-bg-opacity: 1;
   background-color: rgb(43 43 43 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity));
+}
+
+article a {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+
+:is(.dark article a) {
   --tw-text-opacity: 1;
   color: rgb(212 212 212 / var(--tw-text-opacity));
 }

@@ -56,11 +56,7 @@
     @apply break-words;
   }
 
-  .prose p a {
-    @apply underline underline-offset-4  text-neutral-900 dark:text-neutral-300;
-    
-   
-  }
+ 
 
   .nav-wrapper {
     background: var(--bg);
@@ -89,6 +85,11 @@
   }
   article blockquote {
     @apply bg-[#f3f5f7] dark:bg-[#2b2b2b] py-1 px-4 rounded-md text-neutral-900 dark:text-neutral-300 !not-italic ;
+  }
+
+  article a{
+    @apply underline underline-offset-4 break-all break-words text-neutral-900 dark:text-neutral-300;
+    
   }
 
   article code {
