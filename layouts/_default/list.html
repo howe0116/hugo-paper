@@ -63,7 +63,7 @@
       <h2 class="!my-0  font-bold  text-xl !leading-[1.2]">{{ .Title }}</h2>
       <div>
       <p
-        class="break-all mt-2 text-sm mb-1 overflow-hidden text-ellipsis line-clamp-2 dark:text-neutral-500  max-h-[40px] ">
+        class="break-all mt-2 text-sm mb-1 overflow-hidden text-ellipsis line-clamp-2 md:line-clamp-1 dark:text-neutral-500  max-h-[40px] ">
         {{ .Description | default .Summary }}</p>
       
         <time class="text-sm antialiased dark:text-neutral-500  inline-block">{{ .Date | time.Format ":date_short" }} · </time>
