@@ -59,33 +59,10 @@
     });
 
     // manual switch
-   /* JavaScript code to handle button click and theme change */
-const btnDark = document.querySelector('.btn-dark');
-
-btnDark.addEventListener('click', ($eve) => {
-  changeBtn(() => {
-    setDark(localStorage.getItem('dark') !== 'true');
-  }, $eve);
-});
-
-
-function changeBtn(event, $eve) {
-  // Modify CSS variables based on mouse click position
-  document.documentElement.style.setProperty('--x', $eve.clientX + 'px');
-  document.documentElement.style.setProperty('--y', $eve.clientY + 'px');
-    
-  // Check if browser supports startViewTransition method
-  if (document.startViewTransition) {
-    // Use startViewTransition to change themes if supported
-    document.startViewTransition(() => {
-      event();
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
     });
-  } else {
-    // Directly switch theme if startViewTransition is not supported
-    event();
-  }
-}
-    
   </script>
 
   <div

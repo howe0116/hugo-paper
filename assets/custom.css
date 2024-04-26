@@ -1,6 +1,6 @@
 /* 根据用户设定的深浅主题和鼠标点击位置，应用动画 */
 /* Default ::view-transition selectors for light theme */
-::view-transition-old(*) {
+/* ::view-transition-old(*) {
     animation: none;
 }
 ::view-transition-new(*) {
@@ -11,10 +11,10 @@
 }
 ::view-transition-new(root) {
     z-index: 9999;
-}
+} */
 
 /* Overriding ::view-transition selectors for dark theme */
-html.dark::view-transition-old(*) {
+/* html.dark::view-transition-old(*) {
     animation: expandClipCircle .3s ease-in reverse;
 }
 html.dark::view-transition-new(*) {
@@ -25,16 +25,16 @@ html.dark::view-transition-old(root) {
 }
 html.dark::view-transition-new(root) {
     z-index: 1;
-}
+} */
 
 /* Animation for the view transition effect */
 /* This creates a sunburst-like effect for the theme transition */
-@keyframes expandClipCircle {
+/* @keyframes expandClipCircle {
     from {
         clip-path: circle(0% at var(--x) var(--y)); 
     }
     to{
         clip-path: circle(100% at var(--x) var(--y));
     }
-}
+} */
 
