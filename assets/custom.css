@@ -4,7 +4,7 @@
     animation: none;
 }
 ::view-transition-new(*) {
-    animation: expandClipCircle .3s ease-in;
+    animation: expandClipCircle .1s ease-in;
 }
 ::view-transition-old(root) {
     z-index: 1;
@@ -15,7 +15,7 @@
 
 /* Overriding ::view-transition selectors for dark theme */
 html.dark::view-transition-old(*) {
-    animation: expandClipCircle .3s ease-in reverse;
+    animation: expandClipCircle .1s ease-in reverse;
 }
 html.dark::view-transition-new(*) {
     animation: none;
