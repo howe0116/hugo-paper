@@ -47,7 +47,7 @@
     <div class="flex flex-none items-center">
       
       <img loading="lazy" decoding="async"
-        class="m-0 flex md:w-[145px] md:h-[143px] h-[105px] w-[108px] object-cover rounded-lg shadow-lg dark:brightness-75 " src="{{ . }}">
+        class="m-0 flex md:w-[145px] md:h-[143px] h-[105px] w-[108px] object-cover rounded-md shadow-lg dark:brightness-75 " src="{{ . }}">
       </div>
       {{ else }}
       {{/*  <div class="w-[105px] h-[105px]"></div>  */}}
@@ -58,16 +58,16 @@
     <div class="flex flex-col ">
       <div class="flex flex-col flex-shrink flex-grow flex-1">
      
-      <h2 class="!my-0  font-normal text-xl  dark:text-neutral-400  !leading-[1.4]">{{ .Title }}</h2>
+      <h2 class="!my-0  font-normal text-xl  dark:text-neutral-300  !leading-[1.4]">{{ .Title }}</h2>
 
       <p
-        class="break-all mt-4 text-sm mb-1 overflow-hidden text-ellipsis tracking-wider line-clamp-2 dark:text-neutral-500  max-h-[60px] ">
+        class="break-all mt-4 text-base mb-1 overflow-hidden text-ellipsis tracking-wider line-clamp-2 text-neutral-500  max-h-[60px] ">
         {{ .Description | default .Summary }}</p>
       </div>
       <div >
       
       
-        <time class="text-sm antialiased dark:text-neutral-500  inline-block">{{ .Date | time.Format ":date_short" }} · </time>
+        <time class="text-sm antialiased text-neutral-500  inline-block">{{ .Date | time.Format ":date_short" }} · </time>
         {{/* {{ if .Params.tags }}
 
         {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} ·
@@ -76,7 +76,7 @@
 
         {{ end }} */}}
         <svg t="1709958677055"
-          class="icon h-4 w-4 inline-block -translate-y-[2px] translate-x-[3px] dark:invert dark:text-neutral-500  "
+          class="icon h-4 w-4 inline-block -translate-y-[2px] translate-x-[3px] dark:invert text-neutral-500  "
           viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3921" width="200" height="200">
           <path
             fill="currentColor"
@@ -84,7 +84,7 @@
             p-id="3922"></path>
         </svg>
 
-        <span class="text-sm antialiased dark:text-neutral-500  inline-block">{{ .Section | title }}</span>
+        <span class="text-sm antialiased text-neutral-500  inline-block">{{ .Section | title }}</span>
 
       </div>
     </div>
