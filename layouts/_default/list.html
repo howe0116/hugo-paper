@@ -42,12 +42,12 @@
 {{ end }}
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0 transition duration-500">
-  <div class="flex flex-col md:flex-row content-start gap-6 mb-1">
+  <div class="flex flex-row content-start gap-4 mb-1">
     {{ with .Params.cover }}
     <div class="flex flex-none items-center">
       
       <img loading="lazy" decoding="async"
-        class="m-0 flex md:w-[180px] md:h-[120px] h-[160px] w-full object-cover rounded-lg shadow-lg dark:brightness-75 " src="{{ . }}">
+        class="m-0 flex md:w-[145px] md:h-[143px] h-[105px] w-[108px] object-cover rounded-lg shadow-lg dark:brightness-75 " src="{{ . }}">
       </div>
       {{ else }}
       {{/*  <div class="w-[105px] h-[105px]"></div>  */}}
@@ -55,16 +55,17 @@
         alt="默认封面图"> */}}
       {{ end }}
    
-    <div class="flex flex-col justify-center">
-      {{ if gt .Weight 0 }}
-      <span
-        class="mb-2 ml-px inline-block text-[0.8rem] font-medium uppercase tracking-wider text-[#ff3b2d] opacity-70">Featured</span>
-      {{ end }}
-      <h2 class="!my-0  font-bold  text-xl !leading-[1.2]">{{ .Title }}</h2>
-      <div>
+    <div class="flex flex-col ">
+      <div class="flex flex-col flex-shrink flex-grow flex-1">
+     
+      <h2 class="!my-0  font-normal text-xl  dark:text-neutral-400  !leading-[1.4]">{{ .Title }}</h2>
+
       <p
-        class="break-all mt-2 text-sm mb-1 overflow-hidden text-ellipsis line-clamp-2 md:line-clamp-1 dark:text-neutral-500  max-h-[40px] ">
+        class="break-all mt-4 text-sm mb-1 overflow-hidden text-ellipsis tracking-wider line-clamp-2 dark:text-neutral-500  max-h-[60px] ">
         {{ .Description | default .Summary }}</p>
+      </div>
+      <div >
+      
       
         <time class="text-sm antialiased dark:text-neutral-500  inline-block">{{ .Date | time.Format ":date_short" }} · </time>
         {{/* {{ if .Params.tags }}
