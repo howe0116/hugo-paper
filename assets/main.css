@@ -1986,8 +1986,8 @@ body {
 }
 
 article {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   line-height: 1.8;
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
