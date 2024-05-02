@@ -78,7 +78,7 @@
   }
 
   article {
-    @apply text-lg leading-[1.8] text-neutral-900 dark:text-neutral-300;
+    @apply text-base leading-[1.8] text-neutral-900 dark:text-neutral-300;
   }
   article h1,h2,h3,h4,h5 {
     @apply text-neutral-900 dark:text-neutral-300 ;
