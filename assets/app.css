@@ -84,7 +84,7 @@
     @apply text-neutral-900 dark:text-neutral-300 ;
   }
   article blockquote {
-    @apply bg-[#f3f5f7] dark:bg-[#2b2b2b] py-1 px-4 rounded-md text-neutral-900 dark:text-neutral-300 !not-italic ;
+    @apply bg-black/[3%] dark:bg-[#2b2b2b] py-1 px-8 rounded-r-lg text-neutral-900 dark:text-neutral-300 !not-italic ;
   }
 
   article a{
