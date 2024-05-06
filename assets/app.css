@@ -78,7 +78,7 @@
   }
 
   article {
-    @apply text-base leading-[1.8] text-neutral-900 dark:text-neutral-300;
+    @apply leading-[1.8] text-neutral-900 dark:text-neutral-300;
   }
   article h1,h2,h3,h4,h5 {
     @apply text-neutral-900 dark:text-neutral-300 ;
@@ -90,6 +90,9 @@
   article a{
     @apply underline underline-offset-4 break-all break-words text-neutral-900 dark:text-neutral-300;
     
+  }
+  article p{
+    @apply tracking-wider text-lg ;
   }
 
   article code {
