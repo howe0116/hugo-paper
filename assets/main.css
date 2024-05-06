@@ -2040,12 +2040,6 @@ article a {
   color: rgb(212 212 212 / var(--tw-text-opacity));
 }
 
-article p {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  letter-spacing: 0.05em;
-}
-
 article code {
   display: inline-block;
   font-size: 0.875rem !important;

@@ -91,9 +91,7 @@
     @apply underline underline-offset-4 break-all break-words text-neutral-900 dark:text-neutral-300;
     
   }
-  article p{
-    @apply tracking-wider text-lg ;
-  }
+ 
 
   article code {
     @apply inline-block !text-sm !leading-6;
