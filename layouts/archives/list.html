@@ -25,8 +25,18 @@
       <a class="!my-0 !leading-none text-lg  break-all no-underline   hover:bg-black/[3%]  transition duration-500 dark:hover:bg-white/[8%] hover:scale-105 dark:text-gray-300 hover:transition-transform inline-block rounded-lg p-2 " aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">{{- .Title | markdownify }}</a>
       {{- if .Draft }}<sup><span>&nbsp;&nbsp;[draft]</span></sup>{{- end }}
      
-      <time class="text-sm opacity-60 ml-auto"
-        >{{ .Date | time.Format ("01/02") }}</time>
+      <div class="ml-auto"> 
+       {{ if .Params.tags }}
+
+        {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
+        <a class="text-sm antialiased opacity-80 inline-block no-underline  hover:bg-black/[3%]  transition duration-500 dark:hover:bg-white/[8%] hover:scale-105 dark:text-gray-300 hover:transition-transform rounded-lg p-2 "  href="{{ $href }}"> #{{ . }}</a>
+        {{ end }}
+
+        {{ end }}
+
+      </div>
+      {{/*  <time class="text-sm opacity-60 ml-auto"
+        >{{ .Date | time.Format ("01/02") }}</time>  */}}
     {{- end }}
   </section>
     {{- end }}
