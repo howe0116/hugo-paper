@@ -1338,6 +1338,11 @@ body {
   margin-bottom: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .-mr-8 {
   margin-right: -2rem;
 }
@@ -1426,6 +1431,10 @@ body {
   margin-left: 0px;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1446,6 +1455,10 @@ body {
 
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -1722,8 +1735,17 @@ body {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\.\/dark\.svg\)\] {
   background-image: url(./dark.svg);
+}
+
+.bg-gradient-title {
+  background-image: linear-gradient(to bottom, transparent 60%, rgba(189,202,219,0.3) 0%);
 }
 
 .bg-cover {
@@ -2230,6 +2252,10 @@ article .highlight > div table tr td:last-of-type {
 
 :is(.dark .dark\:bg-white\/\[8\%\]) {
   background-color: rgb(255 255 255 / 8%);
+}
+
+:is(.dark .dark\:bg-white\/\[3\%\]) {
+  background-color: rgb(255 255 255 / 3%);
 }
 
 :is(.dark .dark\:bg-\[url\(\.\/light\.svg\)\]) {

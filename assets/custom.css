@@ -37,7 +37,10 @@ html.dark::view-transition-new(root) {
         clip-path: circle(100% at var(--x) var(--y));
     }
 }
-
+::selection {
+    color: #fff;
+    background: #344449;
+}
 
 html{
     font-family: 'LXGW WenKai Screen';
