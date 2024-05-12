@@ -15,12 +15,12 @@
 {{- if ne .Key "0001" }}
 
 
-   <p class="text-neutral-400 dark:prose-invert text-2xl first-of-type:mt-0 mt-12 mb-4 ml-1 bg-gradient-title inline-block" >{{- replace .Key "0001" "" }}</p>
+   <p class="text-neutral-400 dark:prose-invert text-2xl first-of-type:mt-0 mt-12 mb-4 -ml-1 bg-gradient-title inline-block" >{{- replace .Key "0001" "" }}</p>
 
 
     {{- range .Pages }}
     {{- if eq .Kind "page" }}
-    <section class=" flex items-center justify-between my-4">
+    <section class=" flex items-center justify-between my-4 -mx-2">
       
       <a class="!my-0 !leading-none text-lg  break-all no-underline   hover:bg-black/[3%]  transition duration-500 dark:hover:bg-white/[8%] hover:scale-105 dark:text-gray-300 hover:transition-transform inline-block rounded-lg p-2 " aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">{{- .Title | markdownify }}</a>
       {{- if .Draft }}<sup><span>&nbsp;&nbsp;[draft]</span></sup>{{- end }}
