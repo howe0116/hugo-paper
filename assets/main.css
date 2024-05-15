@@ -1303,6 +1303,11 @@ body {
   margin-bottom: 0px !important;
 }
 
+.-mx-2 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
 .-mx-5 {
   margin-left: -1.25rem;
   margin-right: -1.25rem;
@@ -1338,9 +1343,8 @@ body {
   margin-bottom: 1rem;
 }
 
-.-mx-2 {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+.-ml-1 {
+  margin-left: -0.25rem;
 }
 
 .-mr-8 {
@@ -1373,10 +1377,6 @@ body {
 
 .mb-4 {
   margin-bottom: 1rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
 }
 
 .ml-4 {
@@ -1425,10 +1425,6 @@ body {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.-ml-1 {
-  margin-left: -0.25rem;
 }
 
 .line-clamp-2 {
@@ -2004,6 +2000,7 @@ body {
 
 article {
   line-height: 1.8;
+  letter-spacing: 0.05em;
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
 }
