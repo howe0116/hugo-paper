@@ -1,7 +1,7 @@
 <header class="mx-auto flex h-[4.5rem] max-w-3xl px-4 md:px-8   lg:justify-center ">
   <div class="relative z-50 mr-auto flex items-center">
     <a
-      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl "
       href="{{ `` | absURL }}"
       >{{ site.Title }}</a
     >
@@ -96,7 +96,7 @@ function changeBtn(event, $eve) {
     <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-2">
       {{ range . }}
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base px-2 py-1 cursor-pointer md:hover:bg-black/[5%] text-neutral-700 transition duration-500 md:dark:hover:bg-neutral-700 dark:text-neutral-300 lg:hover:transition-transform rounded-lg"
+        class="block text-center text-2xl font-normal leading-[5rem] lg:text-base px-2 py-1 cursor-pointer md:hover:bg-black/[5%] text-neutral-700 transition duration-500 md:dark:hover:bg-neutral-700 dark:text-neutral-300 lg:hover:transition-transform rounded-lg"
         href="{{ .URL }}"
         >{{ .Name }}</a
       >

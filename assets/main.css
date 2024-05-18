@@ -1308,6 +1308,11 @@ body {
   margin-right: -0.5rem;
 }
 
+.-mx-3 {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
 .-mx-5 {
   margin-left: -1.25rem;
   margin-right: -1.25rem;
@@ -1341,10 +1346,6 @@ body {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.-ml-1 {
-  margin-left: -0.25rem;
 }
 
 .-mr-4 {
@@ -1429,10 +1430,6 @@ body {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.-ml-2 {
-  margin-left: -0.5rem;
 }
 
 .line-clamp-2 {
@@ -1761,11 +1758,6 @@ body {
   padding: 1.25rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1861,6 +1853,11 @@ body {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
