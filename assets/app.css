@@ -98,7 +98,7 @@
   }
 
   article .highlight {
-    @apply my-8 -mx-8 ;
+    @apply my-8 rounded-lg;
   }
 
   article .highlight pre {
@@ -135,5 +135,8 @@
 
   article .highlight > div table tr td:last-of-type {
     @apply overflow-auto;
+  }
+  #postcustom h2,h3,h4,h5 {
+    @apply text-lg bg-gradient-title inline-block !my-4;
   }
 }

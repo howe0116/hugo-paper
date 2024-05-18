@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <article>
-  <header class="mb-16">
+  <header class="mb-2">
     <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
 
     {{ if ne .Type "page" }}
@@ -19,7 +19,7 @@
     {{ end }}
   </header>
 
-  <section>{{ .Content }}</section>
+  <section id="postcustom">{{ .Content }}</section>
 
   <!-- Post Tags -->
   {{ if .Params.tags }}
