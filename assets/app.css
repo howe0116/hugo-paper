@@ -137,6 +137,9 @@
     @apply overflow-auto;
   }
   #postcustom h2,h3,h4,h5 {
-    @apply text-lg bg-gradient-title inline-block !my-4;
+    @apply text-lg !my-4;
+  }
+  #postcustom a{
+    @apply decoration-1 decoration-neutral-800 dark:decoration-neutral-400;
   }
 }

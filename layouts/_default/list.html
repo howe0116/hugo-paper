@@ -40,7 +40,7 @@
 {{ end }}<!---->
 
 {{ end }}
-  <!--
+<!--
 <section class="relative my-2 -mx-5 first-of-type:mt-0 last-of-type:mb-0 transition duration-500 hover:bg-black/[5%] dark:hover:bg-white/[5%] rounded-xl px-5 py-2">
   <h2 class="!my-0 font-normal text-xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
   <time class="text-sm antialiased text-neutral-500  inline-block mt-1">
@@ -53,54 +53,68 @@
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
   </section>-->
 
+{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}
+<section class="relative mb-16 -mt-8 -mx-5  transition duration-500  rounded-lg p-5">
+  {{ with .Params.cover }}
+  <img loading="lazy" decoding="async"
+    class="m-0 flex w-full mb-8 object-cover rounded-lg dark:brightness-75 " src="{{ . }}">
+  {{ end }}
 
- <section class="relative my-2 -mx-5 first-of-type:mt-0 last-of-type:mb-0 transition duration-500 hover:bg-black/[5%] dark:hover:bg-white/[5%] rounded-xl p-5">
-  <div class="flex flex-row justify-between content-start gap-6 mb-1">
+  <div class="flex flex-col ">
+    <div class="flex flex-col flex-shrink flex-grow">
+
+      <h2 class="!my-0 font-normal text-3xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
+
+      <p class="break-all mt-2 text-base mb-1 overflow-hidden text-ellipsis tracking-wider  max-h-[50px] ">
+        {{ .Description | default .Summary }}</p>
+
+
+    </div>
+    <div>
+
+
+      <time class="text-sm antialiased opacity-70 inline-block">{{ .Date | time.Format ":date_short" }} ·
+      </time>
+      <span class="text-sm antialiased opacity-70 inline-block">「{{ .Section | title }}」</span>
+
+    </div>
+  </div>
+
+
+
+  <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
+</section>
+{{ else }}
+
+<section
+  class="relative my-4 -mx-5 first-of-type:mt-0 last-of-type:mb-0  transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded-xl shadow-sm p-5">
+  <div class="flex flex-row justify-between  gap-6 mb-1">
     <div class="flex flex-col ">
       <div class="flex flex-col flex-shrink flex-grow">
 
         <h2 class="!my-0 font-normal text-2xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
-        <div class="hidden md:block">
-          <p
-            class="break-all mt-4 text-base mb-1 overflow-hidden text-ellipsis tracking-wider line-clamp-2 text-neutral-500  max-h-[50px] ">
-            {{ .Description | default .Summary }}</p>
-        </div>
+
       </div>
       <div>
 
 
-        <time class="text-sm antialiased text-neutral-500  inline-block">{{ .Date | time.Format ":date_short" }} ·
+        <time class="text-sm antialiased opacity-70 inline-block">{{ .Date | time.Format ":date_short" }} ·
         </time>
-        {{/* {{ if .Params.tags }}
-
-        {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} ·
-        <span class="text-sm antialiased opacity-60 inline-block">{{ . }}</span>
-        {{ end }}
-
-        {{ end }} */}}
-        <svg t="1709958677055"
-          class="icon h-4 w-4 inline-block -translate-y-[3px] translate-x-[3px] dark:invert text-neutral-500  "
-          viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3921" width="200" height="200">
-          <path fill="currentColor"
-            d="M170.666667 85.333333l213.333333 0 85.333333 128 384 0q52.992 0 90.496 37.504t37.504 90.496l0 469.333333q0 52.992-37.504 90.496t-90.496 37.504l-682.666667 0q-52.992 0-90.496-37.504t-37.504-90.496l0-597.333333q0-52.992 37.504-90.496t90.496-37.504zM423.68 298.666667l-82.346667-128-170.666667 0q-17.664 0-30.165333 12.501333t-12.501333 30.165333l0 597.333333q0 17.664 12.501333 30.165333t30.165333 12.501333l682.666667 0q17.664 0 30.165333-12.501333t12.501333-30.165333l0-469.333333q0-17.664-12.501333-30.165333t-30.165333-12.501333l-429.653333 0z"
-            p-id="3922"></path>
-        </svg>
-
-        <span class="text-sm antialiased text-neutral-500  inline-block">{{ .Section | title }}</span>
+        <span class="text-sm antialiased opacity-70 inline-block">「{{ .Section | title }}」</span>
 
       </div>
     </div>
     {{ with .Params.cover }}
-    <div class="flex flex-none items-center">
 
-      <img loading="lazy" decoding="async"
-        class="m-0 flex md:w-[145px] md:h-[143px] h-[84px] w-[86px] object-cover rounded-xl shadow-xl dark:brightness-75 "
-        src="{{ . }}">
-    </div>
+
+    <img loading="lazy" decoding="async"
+      class="m-0 flex  h-[84px] w-[86px] object-cover rounded shadow-xl dark:brightness-75 " src="{{ . }}">
+
     {{ end }}
   </div>
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
 </section>
+{{ end }}
 {{ end }}
 
 <!-- Main Nav -->
