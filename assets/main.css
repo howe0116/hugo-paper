@@ -1471,6 +1471,10 @@ body {
   height: 2rem;
 }
 
+.h-\[180px\] {
+  height: 180px;
+}
+
 .h-\[4\.5rem\] {
   height: 4.5rem;
 }
@@ -1487,28 +1491,8 @@ body {
   height: 1px;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-\[150px\] {
-  height: 150px;
-}
-
-.h-\[300px\] {
-  height: 300px;
-}
-
-.h-\[160px\] {
-  height: 160px;
-}
-
-.h-\[227px\] {
-  height: 227px;
-}
-
-.h-\[206px\] {
-  height: 206px;
+.h-\[183px\] {
+  height: 183px;
 }
 
 .max-h-\[50px\] {
@@ -1838,11 +1822,6 @@ body {
 
 .text-\[1\.6rem\] {
   font-size: 1.6rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-lg {
