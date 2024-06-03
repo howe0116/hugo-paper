@@ -54,12 +54,13 @@
   </section>-->
 
 {{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}
-<section class="relative transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded shadow-sm pb-4 ">
-  {{ with .Params.cover }}
+
+<section class="relative transition duration-500 active:scale-95 bg-white dark:bg-white/[8%] rounded shadow-sm pb-4 ">
+ <div class="p-5"> {{ with .Params.cover }}
   
   <img loading="lazy" decoding="async"
-    class="m-0 flex w-full md:h-auto h-[160px] mb-4 object-cover rounded-t shadow dark:brightness-75 " src="{{ . }}">
-  {{ end }}
+    class="m-0 flex w-full  mb-4 object-cover rounded-lg shadow dark:brightness-75 " src="{{ . }}">
+ </div> {{ end }}
 
 
 </div>
@@ -124,7 +125,7 @@
 
 
     <img loading="lazy" decoding="async"
-      class="m-0 flex  h-[84px] w-[86px] object-cover rounded shadow-xl dark:brightness-75 " src="{{ . }}">
+      class="m-0 flex  h-[84px] w-[86px] object-cover rounded-lg shadow-xl dark:brightness-75 " src="{{ . }}">
 
     {{ end }}
   </div>
