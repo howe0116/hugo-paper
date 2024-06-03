@@ -1495,6 +1495,10 @@ body {
   height: 183px;
 }
 
+.h-\[160px\] {
+  height: 160px;
+}
+
 .max-h-\[50px\] {
   max-height: 50px;
 }
@@ -1669,6 +1673,11 @@ body {
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+}
+
+.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .border-\[0\.5px\] {
