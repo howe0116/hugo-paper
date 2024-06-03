@@ -54,18 +54,20 @@
   </section>-->
 
 {{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}
-<section class="relative mb-16 -mt-8 -mx-5  transition duration-500  rounded-lg p-5">
+<section class="relative transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded pb-4 ">
   {{ with .Params.cover }}
   <img loading="lazy" decoding="async"
-    class="m-0 flex w-full mb-8 object-cover rounded-lg dark:brightness-75 " src="{{ . }}">
+    class="m-0 flex w-full mb-4 object-cover rounded-t-lg dark:brightness-75 " src="{{ . }}">
   {{ end }}
 
-  <div class="flex flex-col ">
+
+</div>
+  <div class="flex flex-col px-4 ">
     <div class="flex flex-col flex-shrink flex-grow">
 
-      <h2 class="!my-0 font-normal text-3xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
+      <h2 class="!my-0 font-normal text-2xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
 
-      <p class="break-all mt-2 text-base mb-1 overflow-hidden text-ellipsis tracking-wider  max-h-[50px] ">
+      <p class="break-all mt-2 text-base mb-1 overflow-hidden opacity-70 text-ellipsis tracking-wider  max-h-[50px] ">
         {{ .Description | default .Summary }}</p>
 
 
@@ -73,9 +75,15 @@
     <div>
 
 
-      <time class="text-sm antialiased opacity-70 inline-block">{{ .Date | time.Format ":date_short" }} ·
+      <time class="text-xs antialiased opacity-60 inline-block">{{ .Date | time.Format ":date_short" }} 
       </time>
-      <span class="text-sm antialiased opacity-70 inline-block">「{{ .Section | title }}」</span>
+      {{ if .Params.tags }}
+      
+      {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} 
+      <span class="text-xs antialiased opacity-60 inline-block">「{{ . }}」</span>
+      {{ end }}
+      
+      {{ end }}
 
     </div>
   </div>
@@ -87,7 +95,7 @@
 {{ else }}
 
 <section
-  class="relative my-4 -mx-5 first-of-type:mt-0 last-of-type:mb-0  transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded-xl shadow-sm p-5">
+  class="relative my-4 first-of-type:mt-0 last-of-type:mb-0  transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded shadow-sm p-4">
   <div class="flex flex-row justify-between  gap-6 mb-1">
     <div class="flex flex-col ">
       <div class="flex flex-col flex-shrink flex-grow">
@@ -98,9 +106,15 @@
       <div>
 
 
-        <time class="text-sm antialiased opacity-70 inline-block">{{ .Date | time.Format ":date_short" }} ·
+        <time class="text-xs antialiased opacity-60 inline-block">{{ .Date | time.Format ":date_short" }}
         </time>
-        <span class="text-sm antialiased opacity-70 inline-block">「{{ .Section | title }}」</span>
+        {{ if .Params.tags }}
+      
+      {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} 
+      <span class="text-xs antialiased opacity-60 inline-block">「{{ . }}」</span>
+      {{ end }}
+      
+      {{ end }}
 
       </div>
     </div>
