@@ -54,10 +54,11 @@
   </section>-->
 
 {{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}
-<section class="relative transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded pb-4 ">
+<section class="relative transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded shadow-sm pb-4 ">
   {{ with .Params.cover }}
+  
   <img loading="lazy" decoding="async"
-    class="m-0 flex w-full mb-4 object-cover rounded-t-lg dark:brightness-75 " src="{{ . }}">
+    class="m-0 flex w-full md:h-auto h-[206px] mb-4 object-cover rounded-t-lg shadow dark:brightness-75 " src="{{ . }}">
   {{ end }}
 
 
@@ -67,7 +68,7 @@
 
       <h2 class="!my-0 font-normal text-2xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
 
-      <p class="break-all mt-2 text-base mb-1 overflow-hidden opacity-70 text-ellipsis tracking-wider  max-h-[50px] ">
+      <p class="break-all text-sm mt-2 mb-1 overflow-hidden opacity-70 text-ellipsis tracking-wider  max-h-[50px] ">
         {{ .Description | default .Summary }}</p>
 
 
@@ -75,12 +76,12 @@
     <div>
 
 
-      <time class="text-xs antialiased opacity-60 inline-block">{{ .Date | time.Format ":date_short" }} 
+      <time class="text-sm antialiased dark:text-neutral-300  inline-block">{{ .Date | time.Format ":date_short" }} 
       </time>
       {{ if .Params.tags }}
       
       {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} 
-      <span class="text-xs antialiased opacity-60 inline-block">「{{ . }}」</span>
+      <span class="text-sm antialiased dark:text-neutral-300 inline-block">「{{ . }}」</span>
       {{ end }}
       
       {{ end }}
@@ -92,6 +93,7 @@
 
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
 </section>
+
 {{ else }}
 
 <section
@@ -106,12 +108,12 @@
       <div>
 
 
-        <time class="text-xs antialiased opacity-60 inline-block">{{ .Date | time.Format ":date_short" }}
+        <time class="text-sm antialiased dark:text-neutral-300  inline-block">{{ .Date | time.Format ":date_short" }}
         </time>
         {{ if .Params.tags }}
       
       {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} 
-      <span class="text-xs antialiased opacity-60 inline-block">「{{ . }}」</span>
+      <span class="text-sm antialiased dark:text-neutral-300  inline-block">「{{ . }}」</span>
       {{ end }}
       
       {{ end }}
