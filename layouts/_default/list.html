@@ -53,49 +53,7 @@
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
   </section>-->
 
-{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}
 
-<section class="relative transition duration-500 active:scale-95 bg-white dark:bg-white/[8%] rounded shadow-sm pb-4 ">
- <div class="p-3"> {{ with .Params.cover }}
-  
-  <img loading="lazy" decoding="async"
-    class="m-0 flex w-full  mb-4 object-cover rounded-lg shadow dark:brightness-75 " src="{{ . }}">
- </div> {{ end }}
-
-
-</div>
-  <div class="flex flex-col px-4 ">
-    <div class="flex flex-col flex-shrink flex-grow">
-
-      <h2 class="!my-0 font-normal text-2xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
-
-      <p class="break-all text-sm mt-2 mb-1 overflow-hidden opacity-70 text-ellipsis tracking-wider  max-h-[50px] ">
-        {{ .Description | default .Summary }}</p>
-
-
-    </div>
-    <div>
-
-
-      <time class="text-sm antialiased dark:text-neutral-300  inline-block">{{ .Date | time.Format ":date_short" }} 
-      </time>
-      {{ if .Params.tags }}
-      
-      {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} 
-      <span class="text-sm antialiased dark:text-neutral-300 inline-block">「{{ . }}」</span>
-      {{ end }}
-      
-      {{ end }}
-
-    </div>
-  </div>
-
-
-
-  <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
-</section>
-
-{{ else }}
 
 <section
   class="relative my-4 first-of-type:mt-0 last-of-type:mb-0  transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded shadow-sm p-4">
@@ -111,13 +69,13 @@
 
         <time class="text-sm antialiased dark:text-neutral-300  inline-block">{{ .Date | time.Format ":date_short" }}
         </time>
-        {{ if .Params.tags }}
+        {{/*  {{ if .Params.tags }}
       
       {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} 
       <span class="text-sm antialiased dark:text-neutral-300  inline-block">「{{ . }}」</span>
       {{ end }}
       
-      {{ end }}
+      {{ end }}  */}}
 
       </div>
     </div>
@@ -131,7 +89,7 @@
   </div>
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>
 </section>
-{{ end }}
+
 {{ end }}
 
 <!-- Main Nav -->

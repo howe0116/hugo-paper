@@ -1415,10 +1415,6 @@ body {
   margin-top: 4rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-24 {
   margin-top: 6rem;
 }
@@ -1487,10 +1483,6 @@ body {
   height: 1px;
 }
 
-.max-h-\[50px\] {
-  max-height: 50px;
-}
-
 .min-h-\[calc\(100\%-9rem\)\] {
   min-height: calc(100% - 9rem);
 }
@@ -1529,6 +1521,10 @@ body {
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .flex-shrink {
@@ -1624,14 +1620,6 @@ body {
   --tw-space-x-reverse: 0;
   margin-right: calc(2.5rem * var(--tw-space-x-reverse));
   margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.text-ellipsis {
-  text-overflow: ellipsis;
 }
 
 .break-words {
@@ -1772,10 +1760,6 @@ body {
   padding-bottom: 0.625rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
 .pt-16 {
   padding-top: 4rem;
 }
@@ -1857,10 +1841,6 @@ body {
 
 .leading-\[5rem\] {
   line-height: 5rem;
-}
-
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 
 .text-black {
