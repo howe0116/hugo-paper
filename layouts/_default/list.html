@@ -29,7 +29,7 @@
   {{ end }}<!---->
   {{ if site.Params.name }}
   <div>
-    <h1 class="mb-2 mt-3 text-[1.6rem] font-bold">{{ site.Params.name }}</h1>
+    <h1 class="mb-2 mt-3 text-[1.6rem] font-bold text-neutral-900 dark:text-neutral-300">{{ site.Params.name }}</h1>
     <div class="break-words">
       {{ site.Params.bio | default (print `A personal blog by `
       site.Params.name) }}
@@ -57,34 +57,22 @@
 
 <section
   class="relative my-4 first-of-type:mt-0 last-of-type:mb-0  transition duration-500 active:scale-95 bg-white dark:bg-white/[5%] rounded shadow-sm p-4">
-  <div class="flex flex-row justify-between  gap-6 mb-1">
-    <div class="flex flex-col ">
-      <div class="flex flex-col flex-shrink flex-grow">
-
-        <h2 class="!my-0 font-normal text-2xl dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
-
-      </div>
-      <div>
-
-
+  <div class="flex flex-row justify-between  gap-2 mb-1">
+    <div class="flex flex-col py-1">
+        <h2 class="!my-0 flex-shrink flex-grow font-normal  text-2xl  dark:text-neutral-300 !leading-[1.4]">{{ .Title }}</h2>
         <time class="text-sm antialiased dark:text-neutral-300  inline-block">{{ .Date | time.Format ":date_short" }}
         </time>
-        {{/*  {{ if .Params.tags }}
+      {{/*  {{ if .Params.tags }}
       
       {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }} 
       <span class="text-sm antialiased dark:text-neutral-300  inline-block">「{{ . }}」</span>
       {{ end }}
       
       {{ end }}  */}}
-
-      </div>
     </div>
     {{ with .Params.cover }}
-
-
     <img loading="lazy" decoding="async"
       class="m-0 flex  h-[84px] w-[86px] object-cover rounded-lg shadow-xl dark:brightness-75 " src="{{ . }}">
-
     {{ end }}
   </div>
   <a class="absolute inset-0 text-[0] " href="{{ .Permalink }}">{{ .Title }}</a>

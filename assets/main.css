@@ -1343,6 +1343,21 @@ body {
   margin-bottom: 1rem;
 }
 
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.-mx-6 {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .-mr-4 {
   margin-right: -1rem;
 }
@@ -1519,12 +1534,12 @@ body {
   width: 100%;
 }
 
-.max-w-3xl {
-  max-width: 48rem;
-}
-
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .flex-shrink {
@@ -1611,6 +1626,10 @@ body {
   gap: 1.5rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1644,6 +1663,10 @@ body {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .border-\[0\.5px\] {
@@ -1713,6 +1736,10 @@ body {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1746,6 +1773,16 @@ body {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-16 {
@@ -1815,6 +1852,11 @@ body {
   line-height: 1rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1871,6 +1913,11 @@ body {
 .text-neutral-700 {
   --tw-text-opacity: 1;
   color: rgb(64 64 64 / var(--tw-text-opacity));
+}
+
+.text-neutral-900 {
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -1971,7 +2018,7 @@ body {
 }
 
 article {
-  line-height: 1.8;
+  line-height: 1.9;
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
@@ -2095,14 +2142,19 @@ article .highlight > div table tr td:last-of-type {
   margin-bottom: 1rem !important;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  color: rgb(0 0 0 / 0.9);
 }
 
-#postcustom a {
+:is(.dark #postcustom h2),:is(.dark h3),:is(.dark h4),:is(.dark h5) {
+  color: rgb(255 255 255 / 0.9);
+}
+
+#postcustom a,del {
   text-decoration-color: #262626;
   text-decoration-thickness: 1px;
 }
 
-:is(.dark #postcustom a) {
+:is(.dark #postcustom a),:is(.dark del) {
   text-decoration-color: #a3a3a3;
 }
 
@@ -2280,6 +2332,11 @@ article .highlight > div table tr td:last-of-type {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:hover\:bg-black\/\[5\%\]:hover {

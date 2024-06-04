@@ -13,16 +13,16 @@
 
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}
+  <div class="bg-white dark:bg-white/[5%] shadow-sm py-4 px-6 -mx-6 rounded-sm my-6">
 
-
-   <p class="text-xl first-of-type:mt-2 mt-12 mb-4 font-normal  bg-gradient-title inline-block" >{{- replace .Key "0001" "" }}</p>
+   <p class="text-lg opacity-60 font-normal inline-block my-2" >{{- replace .Key "0001" "" }}</p>
 
 
     {{- range .Pages }}
     {{- if eq .Kind "page" }}
-    <section class=" flex items-center justify-between my-4 -mx-2">
+    <section class=" flex items-center justify-between my-2 -mx-2">
       
-      <a class="!my-0 !leading-none text-lg  break-all no-underline   hover:bg-black/[3%]  dark:hover:bg-white/[8%]  dark:text-gray-300  transition duration-500 hover:scale-105 hover:transition-transform inline-block rounded-lg p-2 " aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">{{- .Title | markdownify }}</a>
+      <a class="!my-0 !leading-none break-all no-underline  text-lg  hover:bg-black/[3%]  dark:hover:bg-white/[8%]  dark:text-gray-300  transition duration-500 hover:scale-105 hover:transition-transform inline-block rounded-lg p-2 " aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">{{- .Title | markdownify }}</a>
       {{- if .Draft }}<sup><span>&nbsp;&nbsp;[draft]</span></sup>{{- end }}
      
       <div class="ml-auto"> 
@@ -40,7 +40,7 @@
     {{- end }}
   </section>
     {{- end }}
-    
+  </div>
 
 {{- end }}
 {{- end }}
