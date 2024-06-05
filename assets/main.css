@@ -1313,6 +1313,11 @@ body {
   margin-right: -1.25rem;
 }
 
+.-mx-6 {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -1343,19 +1348,14 @@ body {
   margin-bottom: 1rem;
 }
 
-.-mx-4 {
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
-.-mx-6 {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .-mr-4 {
@@ -1622,14 +1622,6 @@ body {
   gap: 0.625rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1661,12 +1653,12 @@ body {
   border-radius: 0.5rem;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border-\[0\.5px\] {
@@ -1699,12 +1691,46 @@ body {
   background-color: rgb(255 255 255 / 0.5);
 }
 
-.bg-\[url\(\.\/dark\.svg\)\] {
-  background-image: url(./dark.svg);
+.bg-black\/\[5\%\] {
+  background-color: rgb(0 0 0 / 5%);
 }
 
-.bg-gradient-title {
-  background-image: linear-gradient(to bottom, transparent 60%, rgba(189,202,219,0.3) 0%);
+.bg-black\/\[3\%\] {
+  background-color: rgb(0 0 0 / 3%);
+}
+
+.bg-orange-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+}
+
+.bg-orange-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+}
+
+.bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F9F0D4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 240 212 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\.\/dark\.svg\)\] {
+  background-image: url(./dark.svg);
 }
 
 .bg-cover {
@@ -1775,14 +1801,24 @@ body {
   padding-bottom: 0.5rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-16 {
@@ -1797,8 +1833,8 @@ body {
   padding-bottom: 0.625rem;
 }
 
-.pt-16 {
-  padding-top: 4rem;
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-center {
@@ -1808,11 +1844,6 @@ body {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-9xl {
@@ -1852,11 +1883,6 @@ body {
   line-height: 1rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1883,6 +1909,10 @@ body {
 
 .leading-\[5rem\] {
   line-height: 5rem;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-black {
@@ -2200,10 +2230,6 @@ article .highlight > div table tr td:last-of-type {
   margin-top: 0px;
 }
 
-.first-of-type\:mt-2:first-of-type {
-  margin-top: 0.5rem;
-}
-
 .last-of-type\:mb-0:last-of-type {
   margin-bottom: 0px;
 }
@@ -2325,6 +2351,11 @@ article .highlight > div table tr td:last-of-type {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:block {
     display: block;
   }
