@@ -2222,9 +2222,8 @@ article .highlight > div table tr td:last-of-type {
   background-color: rgb(0 0 0 / 5%);
 }
 
-.hover\:bg-neutral-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 212 212 / var(--tw-bg-opacity));
+.hover\:bg-black\/\[8\%\]:hover {
+  background-color: rgb(0 0 0 / 8%);
 }
 
 .hover\:transition-transform:hover {
@@ -2301,6 +2300,10 @@ article .highlight > div table tr td:last-of-type {
   background-position: right;
 }
 
+:is(.dark .dark\:hover\:bg-white\/\[15\%\]:hover) {
+  background-color: rgb(255 255 255 / 15%);
+}
+
 :is(.dark .dark\:hover\:bg-white\/\[5\%\]:hover) {
   background-color: rgb(255 255 255 / 5%);
 }
@@ -2309,19 +2312,10 @@ article .highlight > div table tr td:last-of-type {
   background-color: rgb(255 255 255 / 8%);
 }
 
-:is(.dark .dark\:hover\:bg-white\/\[15\%\]:hover) {
-  background-color: rgb(255 255 255 / 15%);
-}
-
 @media (min-width: 768px) {
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
-  }
-
-  .md\:-mx-2 {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
   }
 
   .md\:block {
@@ -2331,11 +2325,6 @@ article .highlight > div table tr td:last-of-type {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .md\:text-base {
