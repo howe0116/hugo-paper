@@ -78,7 +78,7 @@
   }
 
   article {
-    @apply leading-[1.9] text-neutral-900 dark:text-neutral-300 tracking-wider;
+    @apply md:text-[17px] leading-[1.8] text-neutral-900 dark:text-neutral-300;
   }
   article h1,h2,h3,h4,h5 {
     @apply text-neutral-900 dark:text-neutral-300 ;
@@ -136,8 +136,9 @@
   article .highlight > div table tr td:last-of-type {
     @apply overflow-auto;
   }
+ 
   #postcustom h2,h3,h4,h5 {
-    @apply text-lg !my-4 text-black/90 dark:text-white/90;
+    @apply text-xl  text-black/90 dark:text-white/90;
   }
   #postcustom a,del{
     @apply decoration-1 decoration-neutral-800 dark:decoration-neutral-400;

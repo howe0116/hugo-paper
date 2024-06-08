@@ -1999,8 +1999,7 @@ body {
 }
 
 article {
-  line-height: 1.9;
-  letter-spacing: 0.05em;
+  line-height: 1.8;
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
 }
@@ -2008,6 +2007,12 @@ article {
 :is(.dark article) {
   --tw-text-opacity: 1;
   color: rgb(212 212 212 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  article {
+    font-size: 17px;
+  }
 }
 
 article h1,h2,h3,h4,h5 {
@@ -2119,9 +2124,7 @@ article .highlight > div table tr td:last-of-type {
 }
 
 #postcustom h2,h3,h4,h5 {
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   color: rgb(0 0 0 / 0.9);
 }
@@ -2219,6 +2222,11 @@ article .highlight > div table tr td:last-of-type {
   background-color: rgb(0 0 0 / 5%);
 }
 
+.hover\:bg-neutral-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 212 / var(--tw-bg-opacity));
+}
+
 .hover\:transition-transform:hover {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2301,10 +2309,19 @@ article .highlight > div table tr td:last-of-type {
   background-color: rgb(255 255 255 / 8%);
 }
 
+:is(.dark .dark\:hover\:bg-white\/\[15\%\]:hover) {
+  background-color: rgb(255 255 255 / 15%);
+}
+
 @media (min-width: 768px) {
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .md\:-mx-2 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   .md\:block {
@@ -2314,6 +2331,16 @@ article .highlight > div table tr td:last-of-type {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:hover\:bg-black\/\[5\%\]:hover {
